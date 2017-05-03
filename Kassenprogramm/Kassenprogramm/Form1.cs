@@ -17,6 +17,12 @@ namespace Kassenprogramm
             InitializeComponent();
         }
 
+        //http://www.mycsharp.de/wbb2/thread.php?postid=129048
+        //ein Link für eine mögliche Lösung zu der Datenbankverbindung
 
+        private void artikel_box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
