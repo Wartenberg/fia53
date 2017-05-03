@@ -18,5 +18,11 @@ namespace Kassenprogramm
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+        //Hauptbildschirm
+        //hier sollen Artikel direkt verkauft werden können
+        //auch per telefonbestellung
+        //ein Link zu artikel suchen soll möglich sein
+        //im Hauptbildschirm sollen ebenfalls kunden und mitarbeiter einsehbar sein, wenn sie die berechtigungen haben
     }
 }
