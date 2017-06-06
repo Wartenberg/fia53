@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>144</y>
+      <w>144</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Benutzer
+--
+- Benutzername :String
+- Passwort :String
+--
+# GetAllBenutzer :Void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>144</y>
+      <w>160</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Mitarbeiter
+--
+- Geburtsdatum :Date
+- HausNr :String
+- Name :String
+- Vorname :String
+- PLZ :int
+- Ort :String
+- Straße :String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>320</y>
+      <w>104</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Rechte
+--
+- Bezeichnung
+- Id
+--
++ LoadData() :Void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>416</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Posten
+--
+- ArtikelId :Guid
+- VorgangId :Guid
+- Menge :int
+--
+# GetByVorgangId :List Posten</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>712</x>
+      <y>200</y>
+      <w>224</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Bestellung
+--
+- Bestellungszyklus :byte
+- Bestelltam :Date
+- KundeId :Guid
+- Lieferungam :Date
+- MitarbeiterId :Guid
+- Status :String
+--
+# GetBestellungByKundeId :List Bestellung</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>712</x>
+      <y>560</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Artikel
+--
+- ArtikelNr :String
+- ArtikelTyp :String
+- Name :String
+- Preis :double
+--
+# GetAllArtikel :List Artikel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>560</y>
+      <w>176</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Bestand
+--
+- ArtikelId :Guid
+- Menge :int
+- RegalNr :int
+- PlatzNr :int
+--
+# GetListByArtikelId :List Bestand</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>360</y>
+      <w>160</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>Kunde
+--
+- Name :String
+- Vorname :String
+- Geburtsdatum :Date
+- PLZ :int
+- Ort :String
+- Straße :String
+- HausNr :String
+--
+# GetAllKunden :List Kunden</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>432</y>
+      <w>144</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IDBMethoden
+--
++ Id :Guid
+--
++ DeleteDB()
++ InsertDB()
++ LoadData()
++ UpdateDB()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>104</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IDBMethoden
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>176</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>224</y>
+      <w>56</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+besitzt</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>320</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IDBMethoden
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>520</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IDBMethoden
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>520</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IDBMethoden
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>160</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IDBMethoden
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>776</x>
+      <y>376</y>
+      <w>88</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+m2=IDBMethoden
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>192</y>
+      <w>176</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+zugeordnet</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0;90.0;80.0;200.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>280</y>
+      <w>176</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+zugeordnet</panel_attributes>
+    <additional_attributes>10.0;160.0;90.0;160.0;90.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>888</x>
+      <y>312</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..*
+zugeordnet</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>568</x>
+      <y>584</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+zugeordnet</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>712</x>
+      <y>456</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..*
+zugeordnet</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+</diagram>
