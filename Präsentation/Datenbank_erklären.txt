@@ -1,0 +1,13 @@
+Unser Laden wickelt Bestellungen ab.
+	Jede Bestellung wird...
+		...von einer Person
+		durch einen Sachbearbeiter in Auftrag gestellt.
+
+	Jede Bestellung enthält...
+		...vielerlei Posten
+		bestehend aus Artikeln, deren Bestand ersichtlich ist.
+
+
+Anforderung -> Notwendige Datenbasis
+	Dieses Modell ist aus der Anforderung hervorgegangen.
+	Anlehnend an dieser Datenbasis, realisieren wir das Program.
